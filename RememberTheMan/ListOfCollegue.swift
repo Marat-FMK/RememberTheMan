@@ -23,7 +23,7 @@ struct ListOfCollegue: View {
                     HStack {
                         Image(uiImage: UIImage(data: collegue.photo)!)
                             .resizable()
-                            .frame(width: 30, height: 30)
+                            .frame(width: 30, height: 31)
                             .padding()
                         Spacer()
                         Text(collegue.name)
