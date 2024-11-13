@@ -19,7 +19,7 @@ struct AddNewСolleague: View {
     
     var body : some View {
         NavigationStack {
-            VStack(spacing: 45) {
+            VStack(spacing: 44 ) {
                 
                 Image(uiImage: UIImage(data: photo!)!)
                     .resizable()
