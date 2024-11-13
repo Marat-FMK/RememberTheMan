@@ -20,7 +20,7 @@ struct ContentView: View {
             VStack {
                 if selectedPhoto == nil {
                     
-                    NavigationLink("all collegue") {
+                    NavigationLink("all collegue ") {
                         ListOfCollegue()
                     }
                     
@@ -37,7 +37,7 @@ struct ContentView: View {
                         }
                         .onChange(of: pickerItem) {
                             Task {
-                                selectedPhoto = try await pickerItem?.loadTransferable(type: Data.self)
+                                selectedPhoto = try await  pickerItem?.loadTransferable(type: Data.self)
                                 
                             }
                         }
