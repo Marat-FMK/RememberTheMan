@@ -13,7 +13,7 @@ struct InfoView: View {
     
     var body: some View {
         VStack{
-            Image(uiImage: UIImage(data: collegue.photo)!)
+            Image(uiImage: UIImage(data: collegue.photo)!) 
                 .resizable()
                 .scaledToFit()
                 .frame(width: 300, height: 300)
