@@ -11,12 +11,15 @@ import SwiftData
 struct ListOfCollegue: View {
     
     @Environment(\.modelContext) var modelcontext
-    @Query var collegues: [Collegue]
+    @Query(sort: \Collegue.name) var collegues: [Collegue]
+    
     
     var body: some View {
         
         NavigationStack {
-            List(collegues, id: \.self) { collegue in
+            
+            List {
+            ForEach(collegues, id: \.self) { collegue in
                 NavigationLink {
                     InfoView(collegue: collegue)
                 } label: {
@@ -32,12 +35,15 @@ struct ListOfCollegue: View {
                     .frame(height: 50)
                     
                 }
-
+            }
                 
             }
+            
         }
         
     }
+
+    
 }
 
 #Preview {
